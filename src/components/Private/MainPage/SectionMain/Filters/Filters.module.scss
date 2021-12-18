@@ -1,0 +1,43 @@
+.filter{
+  display: flex;
+  background-color: transparent;
+  border: 1px solid #9DC2FF;
+  border-radius: 4px;
+  text-align: center;
+  align-items: center;
+  color:#2264D1;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 24px;
+  line-height: 150%;
+  padding: 8px 140px;
+  cursor: pointer;
+  justify-content: space-between;
+}
+.filterWrapper{
+  padding-right: 60px;
+}
+.form{
+  padding-top: 20px;
+}
+.label{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+.content{
+  padding-bottom: 20px;
+}
+.results{
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  color:#2264D1;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  padding: 5px 0;
+  line-height: 150%;
+  border-color: transparent;
+  background-color: #2264D1;
+  color:#fff;
+  border-radius: 6px;
+}

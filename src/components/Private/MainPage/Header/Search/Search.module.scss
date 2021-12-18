@@ -1,11 +1,11 @@
 .search{
-  padding: 10px 15px 10px 40px;
+  padding: 10px 30px 10px 40px;
   font-size: 20px;
-  width: 600px;
-  border-top-color: transparent;
-  border-color: 	#899499;;
-  border-radius: 10px;
-  color:		#666;
+  width: 585px;
+  background-color: #EDEDF0;
+  border-color:transparent;
+  border-radius: 99px;
+  color:		#000000;
   outline: none;
 }
 .wrapper{
@@ -16,7 +16,7 @@
 }
 .location{
   padding-left: 25px;
-  color:#3CB371;
+  color:#2264D1;
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: bold;
   font-size: 22px;
@@ -45,4 +45,10 @@
   height: 30px;
   left: 8px;
   bottom: 9px;
+}
+.delImg{
+  position: absolute;
+  top:16px;
+  right: 11px;
+  cursor: pointer;
 }

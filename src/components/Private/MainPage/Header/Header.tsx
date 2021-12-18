@@ -4,6 +4,7 @@ import classes from './Header.module.scss'
 import Logo from "../../../Global/Logo/Logo";
 import Container from "../../../Global/Container/Container";
 import HeaderBtns from "./Btns/HeaderBtns";
+import Profile from "./Profile/Profile";
 const Header = () => {
     return (
         <header className={classes.header}>
@@ -12,6 +13,7 @@ const Header = () => {
                     <Logo/>
                     <Search/>
                     <HeaderBtns/>
+                    <Profile/>
                 </div>
             </Container>
 
