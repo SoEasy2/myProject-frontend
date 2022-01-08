@@ -1,0 +1,15 @@
+.wrapper{
+  max-width: 1250px;
+  padding: 0 25px;
+  margin: 0 auto;
+}
+.wrapperParts{
+  display: flex;
+  justify-content: space-between;
+}
+.title{
+  color:#2b3548;
+  font-family: "Quicksand", sans-serif;
+  font-size: 32px;
+  margin-top: 20px;
+}

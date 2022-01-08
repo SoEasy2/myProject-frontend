@@ -1,5 +1,7 @@
 import React from 'react';
 import './Home.scss'
+import {Link} from "react-router-dom";
+import img from './assets/right-arrow.png'
 const Home = () => {
     return (
         <div className="myBody">
@@ -8,7 +10,11 @@ const Home = () => {
                     <style type="text/css" dangerouslySetInnerHTML={{__html: "\n\t.st0{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-miterlimit:10;}\n\t.st1{font-family:'open sans';}\n\t.st2{font-size:125px;}\n" }} />
                     <text transform="matrix(1 0 0 1 0 125.5508)" className="st0 st1 st2">MY PROJECT</text>
                 </svg>
+                <div className="wrapLink">
+                    <Link className={'link'} to={'/store'}>Go to the store <img className={'img'} src={img} alt="img"/></Link>
+                </div>
             </div>
+
         </div>
     );
 };

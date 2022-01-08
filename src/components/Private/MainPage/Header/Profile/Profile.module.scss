@@ -2,6 +2,110 @@
   width: 40px;
   height: 40px;
   object-fit: cover;
-  background-color: #000;
   border-radius: 99px;
+  cursor: pointer;
+}
+.wrapperProfile{
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+  position: relative;
+}
+.btn{
+  font-family: "Quicksand", sans-serif;
+  color: #2264D1;
+  background-color: #fff;
+  border:none;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  outline: none;
+}
+.img{
+  width: 15px;
+  height: 15px;
+  margin-left: 5px;
+}
+.modal{
+  position: absolute;
+  background-color: #fff;
+  border-radius: 4px;
+  transition: all .5s;
+  border:3px solid #2264D1;
+  animation-duration: 2s;
+  animation-name: modalClose;
+}
+.close{
+  visibility: hidden;
+}
+.modalActive{
+  display: block;
+}
+.modalOpen{
+  animation-duration: 2s;
+  animation-name: modalOpen;
+  top:43px;
+}
+.modalClose{
+  top:-150px;
+  animation-duration: 2s;
+  animation-name: modalClose;
+}
+@keyframes modalClose {
+  0%{
+    top:-150px;
+  }
+  1%{
+    top:43px;
+  }
+  10%{
+    top:37px;
+  }
+  20%{
+    top:43px
+  }
+  30%{
+    top:28px;
+  }
+  50%{
+    top:43px;
+  }
+  100%{
+    top:-150px;
+  }
+}
+@keyframes modalOpen {
+  0%{
+    top:-150px;
+  }
+  50%{
+    top:60px;
+  }
+  70%{
+    top:37px;
+  }
+  90%{
+    top:46px;
+  }
+  100%{
+    top:43px;
+  }
+}
+
+.btnModal{
+  background-color: transparent;
+  border: none;
+  color:#2264D1;
+  padding: 10px 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+}
+.hr{
+  margin: 0;
+  padding: 0;
+  background-color:#2264D1;
 }

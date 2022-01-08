@@ -58,4 +58,30 @@ $dark-theme: #171717;
     stroke: transparent;
     fill: rgba(255,255,255,1);
   }
-};
+}
+
+
+.link{
+  text-decoration: none;
+  background-color: #fff;
+  padding: 10px 30px;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 22px;
+  border-radius: 5px;
+  color:#171717;
+  display: flex;
+  align-items: center;
+}
+.wrapLink{
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+}
+.img{
+  width: 30px;
+  height: 30px;object-fit: cover;
+  margin-left: 7px;
+  margin-top: 2px;
+}

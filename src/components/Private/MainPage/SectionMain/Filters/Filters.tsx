@@ -16,13 +16,13 @@ const Filters = () => {
                     <InputPrice name={'to'} placeholder={'To'}/>
                     </div>
                 </label>
-                <label className={classes.label}>Condition
+                <label className={classes.label}>Condition  </label>
                     <div className={classes.content}>
                         <BtnCondition name={'any'} text={'Any'}/>
                         <BtnCondition name={'used'} text={'Used'}/>
                         <BtnCondition name={'new'} text={'New'}/>
                     </div>
-                </label>
+
                 <label className={classes.label}>Seller
                     <div className={classes.content}>
                         <BtnSeller name={'any'} text={'Any'}/>
