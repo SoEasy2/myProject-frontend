@@ -6,7 +6,7 @@ const CardList = () => {
     const {products} = useAppSelector(state=>state.productReducer)
     return (
         <div className={classes.list}>
-            {products ? products.map(item=> <CardItem key={item._id} name={item.name} price={item.price} img={item.img} shortDescription={item.shortDescription}/>
+            {products ? products.map(item=> <CardItem id={item._id} key={item._id} name={item.name} price={item.price} img={item.img} shortDescription={item.shortDescription}/>
             ) : null}
 
         </div>

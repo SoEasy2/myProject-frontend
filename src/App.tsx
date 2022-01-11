@@ -17,6 +17,10 @@ import Transactions from "./components/Private/ProfilePage/SectionMain/SettingPa
 import Logs from "./components/Private/ProfilePage/SectionMain/SettingPart/Logs/Logs";
 import Password from "./components/Private/ProfilePage/SectionMain/SettingPart/Password/Password";
 import Actions from "./components/Private/ProfilePage/SectionMain/SettingPart/Actions/Actions";
+import ModalProduct from "./components/Global/ModalProduct/ModalProduct";
+import Home from "./components/Private/AdminPage/Contents/Home/Home";
+import UserList from "./components/Private/AdminPage/Contents/UserList/UserList";
+import ProductList from "./components/Private/AdminPage/Contents/ProductList/ProductList";
 
 
 
@@ -38,8 +42,11 @@ function App() {
             <Route path={'/profile/transactions'} element={<ProfilePage><Transactions/></ProfilePage>}/>
             <Route path={'/profile/actions'} element={<ProfilePage><Actions/></ProfilePage>}/>
             <Route path={'/create-ad'} element={<CreateAdPage/>}/>
-            <Route path={'/admin'} element={<AdminPage/>}/>
             <Route path={'/reset-password/:link'} element={<ResetPasswordPage/>}/>
+            <Route path={'/store/:product'} element={<MainPage><ModalProduct/></MainPage>}/>
+            <Route path={'/admin'} element={<AdminPage><Home/></AdminPage>}/>
+            <Route path={'/admin/users'} element={<AdminPage><UserList/></AdminPage>} />
+            <Route path={'/admin/products'} element={<AdminPage><ProductList/></AdminPage>}/>
 
         </Routes>
 

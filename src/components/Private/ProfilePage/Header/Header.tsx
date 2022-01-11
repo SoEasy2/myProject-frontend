@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Container from "../../../Global/Container/Container";
 import Logo from "../../../Global/Logo/Logo";
 import Profile from "../../MainPage/Header/Profile/Profile";
 import classes from './Header.module.scss'
-const Header = () => {
+const Header:React.FC = () => {
+
     return (
         <header className={classes.header}>
             <Container>

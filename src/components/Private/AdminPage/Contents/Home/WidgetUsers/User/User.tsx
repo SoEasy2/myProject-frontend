@@ -1,16 +1,22 @@
 import React from 'react';
 import classes from './User.module.scss'
-const User = () => {
+import {API_URL} from "../../../../../../../http/requests/requests";
+interface IProps{
+    avatar:string;
+    email:string;
+    name:string
+}
+const User:React.FC<IProps> = ({avatar, name, email}) => {
     return (
         <li className={classes.widgetUserListItem}>
             <img
-                src="https://images.pexels.com/photos/1526814/pexels-photo-1526814.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500"
+                src={`${API_URL}${avatar}`}
                 alt=""
                 className={classes.widgetUserImg}
             />
             <div className={classes.widgetUser}>
-                <span className={classes.widgetUserName}>Anna Keller</span>
-                <span className={classes.widgetUserEmail}>dskjhadso@mail.ru</span>
+                <span className={classes.widgetUserName}>{name}</span>
+                <span className={classes.widgetUserEmail}>{email}</span>
             </div>
         </li>
     );

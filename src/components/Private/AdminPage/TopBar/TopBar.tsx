@@ -1,12 +1,13 @@
 import React from 'react';
 import {Language, NotificationsNone, Settings} from "@mui/icons-material";
 import classes from './TopBar.module.scss'
+import {Link} from "react-router-dom";
 const TopBar = () => {
     return (
         <div className={classes.topbar}>
             <div className={classes.topbarWrapper}>
                 <div className={classes.topLeft}>
-                    <span className={classes.logo}>MY PROJECT</span>
+                    <Link className={classes.logo} to={'/store'}>MY PROJECT</Link>
                 </div>
                 <div className={classes.topRight}>
                     <div className={classes.topbarIconContainer}>

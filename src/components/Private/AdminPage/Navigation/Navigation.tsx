@@ -10,6 +10,7 @@ import {
     Timeline,
     TrendingUp, WorkOutline
 } from "@mui/icons-material";
+import { Link } from 'react-router-dom';
 
 
 
@@ -20,10 +21,12 @@ const Navigation = () => {
                 <div className={classes.sidebarMenu}>
                     <h3 className={classes.sidebarTitle}>Dashboard</h3>
                     <ul className={classes.sidebarList}>
-                            <li className={`${classes.sidebarListItem} ${classes.active}`}>
-                                <LineStyle className={classes.sidebarIcon} />
-                                Home
-                            </li>
+                            <Link to={'/admin'} className={classes.link}>
+                                <li className={`${classes.sidebarListItem} ${classes.active}`}>
+                                    <LineStyle className={classes.sidebarIcon} />
+                                    Home
+                                </li>
+                            </Link>
                         <li className={classes.sidebarListItem}>
                             <Timeline className={classes.sidebarIcon} />
                             Analytics
@@ -37,15 +40,19 @@ const Navigation = () => {
                 <div className={classes.sidebarMenu}>
                     <h3 className={classes.sidebarTitle}>Quick Menu</h3>
                     <ul className={classes.sidebarList}>
-                            <li className={classes.sidebarListItem}>
-                                <PermIdentity className={classes.sidebarIcon} />
-                                Users
-                            </li>
-                            <li className={classes.sidebarListItem}>
-                                <Storefront className={classes.sidebarIcon} />
-                                Products
-                            </li>
-                        <li className={classes.sidebarListItem}>
+                           <Link className={classes.link} to={'/admin/users'}>
+                               <li className={classes.sidebarListItem}>
+                                   <PermIdentity className={classes.sidebarIcon} />
+                                   Users
+                               </li>
+                           </Link>
+                            <Link to={'/admin/products'} className={classes.link}>
+                                <li className={classes.sidebarListItem}>
+                                    <Storefront className={classes.sidebarIcon} />
+                                    Products
+                                </li>
+                            </Link>
+                        <li className={classes.sidebarListItem} >
                             <AttachMoney className={classes.sidebarIcon} />
                             Transactions
                         </li>

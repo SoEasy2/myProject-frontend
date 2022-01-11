@@ -1,17 +1,24 @@
 import { DataGrid } from '@mui/x-data-grid';
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './UserList.module.scss'
 import {DeleteOutline} from "@mui/icons-material";
 import {userRows} from "./rows/rows";
+import $api from "../../../../../http";
+import {API_URL} from "../../../../../http/requests/requests";
 
 const UserList = () => {
     const [data, setData] = useState(userRows);
-
+    const [users,setUsers] = useState(null)
     const handleDelete = (id:any) => {
         setData(data.filter((item) => item.id !== id));
     };
+    useEffect(()=>{
+        (async()=>{
+            const {data} = await $api.get('api/admin/getUsers')
+            setUsers(data)
+        })()
+    },[])
     const columns = [
-        { field: "id", headerName: "ID", width: 90 },
         {
             field: "user",
             headerName: "User",
@@ -19,43 +26,32 @@ const UserList = () => {
             renderCell: (params:any) => {
                 return (
                     <div className={classes.userListUser}>
-                        <img className={classes.userListImg} src={params.row.avatar} alt="" />
-                        {params.row.username}
+                        <img className={classes.userListImg} src={`${API_URL}${params.row.avatar}`} alt="" />
+                        {params.row.email}
                     </div>
                 );
             },
         },
-        { field: "email", headerName: "Email", width: 200 },
+        { field: "name", headerName: "Name", width: 200 },
         {
-            field: "transaction",
-            headerName: "Transaction Volume",
+            field: "countTransactions",
+            headerName: "Transaction Count",
             width: 160,
         },
-        {
-            field: "action",
-            headerName: "Action",
-            width: 150,
-            renderCell: (params:any) => {
-                return (
-                    <>
-                            <button className={classes.userListEdit}>Edit</button>
-                        <DeleteOutline
-                            className={classes.userListDelete}
-                            onClick={() => handleDelete(params.row.id)}
-                        />
-                    </>
-                );
-            },
-        },
+        {field:'phone', headerName: 'Phone'},
+        {field:'date', headerName: "Registration date", width: 200}
+
+
     ];
 
 
     return (
         <div className={classes.userList}>
-            <DataGrid columns={columns} rows={data}
-                      disableSelectionOnClick
-                      pageSize={8}
-                      checkboxSelection/>
+            {users ? <DataGrid columns={columns} rows={users}
+                               disableSelectionOnClick
+                               getRowId={(row)=>users  ? row.date : null}
+                               pageSize={8}
+                               checkboxSelection/> : null}
         </div>
     );
 };

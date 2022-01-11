@@ -5,7 +5,7 @@ import ModalAuth from "../components/Global/ModalAuth/ModalAuth";
 import Main from "../components/Private/MainPage/Main";
 import Loading from "../components/Global/Loading/Loading";
 
-const MainPage = () => {
+const MainPage:React.FC = ({children}) => {
     const [isLoading, setLoading] = useState<boolean>(true)
     useEffect(()=>{
         setTimeout(()=>{
@@ -16,7 +16,7 @@ const MainPage = () => {
     },[])
     return (
         <>
-            {isLoading ? <Loading/> : <Main/>}
+            {isLoading ? <Loading/> : <Main children={children}/>}
         </>
     );
 };

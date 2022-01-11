@@ -79,6 +79,17 @@ export const uploadImg = (dto:any) => async (dispatch: AppDispatch) =>{
         dispatch(userSlice.actions.userLoginError(err))
     }
 }
+export const updateUser = (dto:any) =>async (dispatch:AppDispatch) =>{
+    try{
+        dispatch(userSlice.actions.userLoginFetching())
+        const response = await $api.post<IDataLogin>('api/update-user',dto)
+        localStorage.setItem('token', response.data.accessToken ? response.data.accessToken : '');
+        dispatch(userSlice.actions.userLoginSuccess(response.data))
+    }catch (error) {
+        const err = (error as Error).message
+        dispatch(userSlice.actions.userLoginError(err))
+    }
+}
 export const createProduct = (dto:any) => async (dispatch: AppDispatch) =>{
     try{
         dispatch(userSlice.actions.userLoginFetching())

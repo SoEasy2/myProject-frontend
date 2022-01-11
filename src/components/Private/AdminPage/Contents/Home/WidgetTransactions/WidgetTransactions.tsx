@@ -1,7 +1,16 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import classes from './WidgetTransactions.module.scss'
 import Transactions from "./Transactions/Transactions";
+import $api from "../../../../../../http";
 const WidgetTransactions = () => {
+    const [transactions, setTransactions] = useState<Array<any>>([])
+    useEffect(()=>{
+        (async ()=>{
+          const {data} = await $api.get('api/admin/lastTransactions');
+          setTransactions(data)
+            console.log(data)
+        })()
+    },[])
     return (
         <div className={classes.widgetTransactions}>
             <h3 className={classes.widgetTransactionsTitle}>Latest transactions</h3>
@@ -12,9 +21,7 @@ const WidgetTransactions = () => {
                     <th className={classes.widgetTransactionsTh}>Amount</th>
                     <th className={classes.widgetTransactionsTh}>Status</th>
                 </tr>
-                <Transactions/>
-                <Transactions/>
-                <Transactions/>
+                {transactions.length ? transactions.map(item=> <Transactions email={item.user.email} avatar={item.user.avatar} price={item.price} key={item.id} date={item.date}/>) :null}
             </table>
         </div>
     );

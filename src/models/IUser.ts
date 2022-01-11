@@ -25,6 +25,7 @@ export interface IUser{
     password:string;
     phone:string | null;
     avatar:string;
+    date:string;
     cart:{
         items:IItems | null
     };

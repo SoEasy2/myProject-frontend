@@ -12,7 +12,6 @@ const Profile = () => {
     return (
         <div className={classes.wrapperProfile}  onClick={()=>setLoading({isFistLoading: false, isActive: !isLoading.isActive})}>
             <img src={user ? `${API_URL}${user.avatar}` : ''} alt="img-profile" className={classes.imgProfile} />
-
             <button className={classes.btn}>Profile <img src={img.default} alt="img" className={classes.img}/></button>
             {!isLoading.isFistLoading ? <div
                 className={isLoading.isActive ? `${classes.modal} ${classes.modalOpen}` : `${classes.modal} ${classes.modalClose}`}>
@@ -21,6 +20,10 @@ const Profile = () => {
                         <Link to={'/profile/account'}><button className={classes.btnModal}>Profile</button></Link>
                     </li>
                     <hr className={classes.hr}/>
+                    {user!.roles.includes('ADMIN') ? <>   <li>
+                        <Link to={'/admin'}><button className={classes.btnModal}>Admin</button></Link>
+                    </li>
+                        <hr className={classes.hr}/></> : null}
                     <li className={classes.li}>
                         <button className={`${classes.btnModal}`} onClick={() => dispatch(authLogout())}>Logout</button>
                     </li>

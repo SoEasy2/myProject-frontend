@@ -2,20 +2,17 @@ import React from 'react';
 import Navigation from "./Navigation/Navigation";
 import classes from "./Admin.module.scss"
 import TopBar from "./TopBar/TopBar";
-import Home from "./Contents/Home/Home";
-import UserList from "./Contents/UserList/UserList";
-import ProductList from "./Contents/ProductList/ProductList";
 
 
-const Admin = () => {
+const Admin:React.FC = ({children}) => {
     return (
         <>
         <TopBar/>
         <div className={classes.wrapper}>
             <Navigation/>
+            {children}
             {/*<Home/>*/}
            {/* <UserList/>*/}
-            <ProductList/>
         </div>
             </>
     );

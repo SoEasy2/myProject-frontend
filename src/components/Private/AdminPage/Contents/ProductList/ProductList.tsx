@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import {productRows} from "./arr/product";
 import {DataGrid} from "@mui/x-data-grid";
 import {DeleteOutline} from "@mui/icons-material";
 import classes from './ProductList.module.scss'
 import {useAppDispatch, useAppSelector} from "../../../../../hooks/redux";
 import {confirmProduct} from "../../../../../redux/reducers/ActionCreators";
+import {API_URL} from "../../../../../http/requests/requests";
 
 const ProductList = () => {
     const dispatch = useAppDispatch()
@@ -21,7 +21,7 @@ const ProductList = () => {
             renderCell: (params:any) => {
                 return (
                     <div className={classes.productListItem}>
-                        <img className={classes.productListImg} src={params.row.img} alt="" />
+                        <img className={classes.productListImg} src={`${API_URL}${params.row.img}`} alt="" />
                         {params.row.name}
                     </div>
                 );
