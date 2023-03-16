@@ -1,0 +1,22 @@
+.item{
+  background-color: transparent;
+  padding: 8px 7px 4px;
+  border-radius: 8px;
+  color:#787885;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.active{
+  background-color: #EBF2FF;
+  font-weight: 500;
+  font-size: 14px;
+  color:#2979FF;
+}

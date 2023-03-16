@@ -1,0 +1,73 @@
+.cardImg{
+  width: 227px;
+  height: 227px;
+  object-fit: cover;
+  position: center;
+}
+.titleCard{
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  margin-top: 12px;
+  color:#19191D;
+  max-width: 227px;
+}
+.price{
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  margin-top: 8px;
+}
+.desk{
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color:#787885;
+  max-width: 227px;
+  margin-top: 8px;
+}
+.contentBottom{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+}
+.rated{
+  margin-left: 10px;
+}
+.temp{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+  transition: all .4s;
+  &:hover{
+    box-shadow: 0px 2px 4px rgba(59, 69, 123, 0.2), 0px 4px 8px rgba(92, 107, 192, 0.2);
+    border-radius: 8px;
+  }
+
+  margin: 0 25px 10px;
+
+}
+.like{
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  border: 1px solid #9DC2FF;
+  color:#2264D1;
+  font-size: 14px;
+  line-height: 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: transparent;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  padding: 4px 12px;
+  margin-right: 10px;
+}
+.img{
+  width: 16px;
+  height: 17px;
+  margin-right: 2px;
+}

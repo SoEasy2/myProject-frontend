@@ -1,0 +1,17 @@
+.button{
+  font-family: "Quicksand", sans-serif;
+  color:#7A8798;
+  font-size: 16px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  margin-top: 10px;
+  padding: 10px 0px 10px 15px;
+  width: 150px;
+  background-color: transparent;
+  text-align: left;
+}
+.active{
+  color:#28313C;
+  background-color: #DBEBFD;
+}

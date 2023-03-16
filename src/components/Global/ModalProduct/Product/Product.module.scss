@@ -1,0 +1,79 @@
+.wrapper{
+  position: absolute;
+  z-index: 3000;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background-color: rgba(0,0,0,0.5);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.content{
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  display: flex;
+  cursor: default;
+}
+.text{
+  width: 250px;
+  max-width: 400px;
+  overflow-wrap: anywhere;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  margin-bottom: 20px;
+}
+.img{
+  width: 400px;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+.button{
+  font-family: 'Quicksand', sans-serif;
+  border:solid 1px #9DC2FF;
+  background-color: transparent;
+  font-size: 16px;
+  color:#2264D1;
+  border-radius: 4px;
+  padding: 5px 8px;
+  cursor: pointer;
+  transition: all .5s;
+  &:hover{
+    border-color: #ffffff;
+    box-shadow: 0px 2px 4px rgba(27, 78, 163, 0.2), 0px 4px 8px rgba(41, 121, 255, 0.2);
+  }
+}
+.user{
+  position: absolute;
+  bottom:0;
+  left:0;
+  display: flex;
+  align-items: center;
+}
+.info{
+  margin-left: 20px;
+  overflow-wrap: anywhere;
+  position: relative;
+}
+.span{
+  display: block;
+  margin-bottom: 3px;
+}
+.imgUser{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+}
+.infoUser{
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  margin-left: 5px;
+}

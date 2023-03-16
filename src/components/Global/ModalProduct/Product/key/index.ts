@@ -1,0 +1,1 @@
+export const REACT_STRIPE_KEY = 'sk_test_51JzgFZCQXr7lfUBBlOqalldHNorMLRAQaAw1mtcZTcduu72fMygse4rvSiIBhZQFRSW6A8j04opOrhlg4TvTE5ac00kEo4I1BK'
